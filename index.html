@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="buttonkbaap">
+    <div class="nav">
+        <button onclick="showPersonalRecommendations()">Personal Recommendations</button>
+    </div>
+    <div class="nav2">
+        <button onclick="getAQI()">Check AQI</button>
+    </div>
+</div>
+
+<div class="baap">
+    <div class="container" id="aqiContainer">
+        <div class="header">
+            <h1>🌍 Air Quality Index (AQI)</h1>
+        </div>
+        <div class="city-section">
+            <input type="text" id="cityInput" placeholder="🔎 Search location">
+        </div>
+        <div class="aqi-display">
+            <h2 id="aqiValue">AQI: -</h2>
+        </div>
+        <div class="pollutants">
+            <div class="pollutant-box">PM2.5: -</div>
+            <div class="pollutant-box">PM10: -</div>
+            <div class="pollutant-box">CO: -</div>
+            <div class="pollutant-box">NO₂: -</div>
+            <div class="pollutant-box">SO₂: -</div>
+            <div class="pollutant-box">O₃: -</div>
+        </div>
+    </div>
+
+    <div id="personalDetails" class="personal-details-box">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="phoneNumber" placeholder="Phone Number">
+        <input type="number" id="age" placeholder="Age">
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <div id="diseases">
+            <label><input type="checkbox" name="disease" value="asthma"> Asthma</label>
+            <label><input type="checkbox" name="disease" value="copd"> COPD</label>
+            <label><input type="checkbox" name="disease" value="heart_disease"> Heart Disease</label>
+            <label><input type="checkbox" name="disease" value="none"> None</label>
+        </div>
+        <button onclick="submitDetails()">Submit Details</button>
+        <div id="recommendations" class="recommendations"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

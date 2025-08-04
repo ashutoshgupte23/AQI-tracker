@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.99);
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+    box-shadow: inset;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(150deg, rgb(245, 105, 245), rgb(136, 23, 136), rgb(44, 1, 44));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 50%;
+    max-width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav button {
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav button:hover {
+    background-color: #2e7d32;
+}
+
+.city-section {
+    margin-bottom: 20px;
+}
+
+.city-section input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border: 2px solid #1b5e20;
+    border-radius: 20px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.city-section button {
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.city-section button:hover {
+    background-color: #2e7d32;
+}
+
+.aqi-display {
+    margin-bottom: 20px;
+}
+
+.aqi-display h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.pollutants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.pollutant-box {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    color: aliceblue;
+    min-width: 120px;
+}
+
+.personal-details-box {
+    background: linear-gradient(150deg, rgb(128, 105, 245), rgb(96, 23, 136), rgb(10, 1, 44));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 50%;
+    max-width: 600px;
+}
+
+.personal-details-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.personal-details-box input,
+.personal-details-box select {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 10px;
+    border: 2px solid #1b5e20;
+    border-radius: 20px;
+    background-color: black;
+    color: aliceblue;
+}
+
+#diseases {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+#diseases label {
+    display: block;
+    margin: 5px 0;
+}
+
+.personal-details-box button {
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    width: 50%;
+}
+
+.personal-details-box button:hover {
+    background-color: #2e7d32;
+}
+
+.recommendations {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+}
+
+.baap {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.buttonkbaap {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.nav2 button {
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav2 button:hover {
+    background-color: blue;
+}
+
+
+
+
+
+/* =================== RESPONSIVE DESIGN =================== */
+@media (max-width: 768px) {
+    .baap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container,
+    .personal-details-box {
+        width: 90%;
+    }
+
+    .city-section input,
+    .personal-details-box input,
+    .personal-details-box select {
+        width: 90%;
+        margin: 8px 0;
+    }
+
+    .personal-details-box button,
+    .nav button,
+    .nav2 button {
+        width: 90%;
+    }
+
+    #diseases {
+        flex-direction: column;
+        padding-left: 0;
+        align-items: flex-start;
+    }
+
+    #diseases label {
+        margin-left: 10px;
+    }
+
+    .pollutant-box {
+        flex: 1 1 100%;
+    }
+
+    .aqi-display h2 {
+        font-size: 24px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+}
